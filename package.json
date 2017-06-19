@@ -1,12 +1,104 @@
 {
-  "name": "ssr-react-router4",
-  "version": "0.0.1",
-  "description": "[![NPM Version][npm-image]][npm-url] [![NPM Downloads][downloads-image]][downloads-url] [![Node.js Version][node-version-image]][node-version-url] [![Build Status][travis-image]][travis-url] [![Test Coverage][coveralls-image]][coveralls-url]",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_from": "ssr-react-router4",
+  "_id": "ssr-react-router4@0.0.2",
+  "_inCache": true,
+  "_location": "/ssr-react-router4",
+  "_nodeVersion": "6.9.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/ssr-react-router4-0.0.2.tgz_1489136572147_0.9325028557796031"
   },
-  "keywords": [],
-  "author": "Vishal Bajpai <vishal.dev1223@gmail.com> (vishal.dev1223@gmail.com)",
-  "license": "ISC"
+  "_npmUser": {
+    "name": "vishal.bajpai",
+    "email": "vishal.dev1223@gmail.com"
+  },
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ssr-react-router4",
+    "scope": null,
+    "escapedName": "ssr-react-router4",
+    "name": "ssr-react-router4",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ssr-react-router4/-/ssr-react-router4-0.0.2.tgz",
+  "_shasum": "9805e8b80d13f7a3ede0e159dfd58afbd5fe96bd",
+  "_shrinkwrap": null,
+  "_spec": "ssr-react-router4",
+  "_where": "/home/ttnd/Documents/react_pro/myNpm",
+  "author": {
+    "name": "TJ Holowaychuk",
+    "email": "vishal.dev1223@gmail.com",
+    "url": "http://testingg.com"
+  },
+  "bugs": {
+    "url": "https://github.com/vishalbajpaidev/ssr-react-router4/issues"
+  },
+  "contributors": [
+    {
+      "name": "vishal",
+      "email": "vishal.dev1223@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "react": "15.5.4",
+    "react-redux": "5.0.5",
+    "react-router": "4.1.1",
+    "react-router-dom": "4.1.1"
+  },
+  "description": "server side rendering in reactjs with react-router@4.x",
+  "devDependencies": {
+    "istanbul": "0.4.3",
+    "mocha": "2.5.3",
+    "supertest": "1.1.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "9805e8b80d13f7a3ede0e159dfd58afbd5fe96bd",
+    "tarball": "https://registry.npmjs.org/ssr-react-router4/-/ssr-react-router4-0.0.2.tgz"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "files": [
+    "LICENSE",
+    "HISTORY.md",
+    "index.js"
+  ],
+  "gitHead": "ad0b2cb834affe3929f0a690cd0494cd0b96d6be",
+  "homepage": "https://github.com/vishalbajpaidev/ssr-react-router4",
+  "keywords": [
+    "rrs",
+    "server side rendering",
+    "expressjs",
+    "react",
+    "reactjs",
+    "node",
+    "nodejs"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "vishal.bajpai",
+      "email": "vishal.dev1223@gmail.com"
+    }
+  ],
+  "name": "ssr-react-router4",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishalbajpaidev/ssr-react-router4.git"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  },
+  "version": "0.0.2"
 }

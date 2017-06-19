@@ -7,7 +7,7 @@
 [![Test Coverage][coveralls-image]][coveralls-url]
 
 If you are using express for serve your reactjs app with react-router-4.x, this module will works for you, By using this module you may reander HTML from `sever` by setup very less configuration and you may set list of action that you want to initially dispatch for setup your store before render HTML.
-
+Demo: https://github.com/vishalbajpaidev/ssr-react-router4-demo
 ## Installation
 
 ```sh
@@ -70,13 +70,16 @@ export default [
 ]
 
 ```
-## Note: 
+
 There are two way to dispatch actions in server,
-- Parallel: 
-- Sequential:
-if you push action in loadData key like: 
+- Parallel:  
+  - if you push action in loadData key like: 
 loadData:[getBannerData] // It will run your all actions in Parallel
-- You can run your actionss in Sequential way when API response are dependent on each other 
+- Sequential:
+
+  - You can run your actionss in Sequential way, when API response are dependent on each other.
+  - loadData:[{actionName:getHomeContent,priority:1}] 
+  - You must need to set priority for all sequential actions.
 ## Example
 
 ```js
@@ -113,6 +116,22 @@ const config = {
 
 ```
 
+## Action implementation :
+
+```js
+export function getData({params,queryString,store}) {
+    // First paramenter is fixed for ssr
+    // params & queryString are based on routes, store will be update store on each action
+    // you should pass same values from client due to dispatch action,if needed
+    return (dispatch) =>
+        new Promise((resolve)=>
+        setTimeout(resolve,3000,{data:{home:[val1,val2]}}))
+            .then((json) => {
+                dispatch({type:'GET_DATA_SUCCESS' ,data: json});
+            });
+}
+
+```
 ## Template File :
 - `Ejs Template File` should look like this.
 
@@ -138,7 +157,9 @@ module.exports = `
 - const store = createStore(combineReducers(reducers),initialState);
 - By using this you can get you updated store (form server side) in client side as well. For this you need to defined action's priority like this:
 {actionName:getHomeContent,priority:1}
-
+## Demo :
+Click here for see full demo in reactjs Application.
+Demo: https://github.com/vishalbajpaidev/ssr-react-router4-demo
 
 ### [MIT Licensed](LICENSE)
 
