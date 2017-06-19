@@ -1,0 +1,12 @@
+{
+  "name": "ssr-react-router4",
+  "version": "0.0.1",
+  "description": "[![NPM Version][npm-image]][npm-url] [![NPM Downloads][downloads-image]][downloads-url] [![Node.js Version][node-version-image]][node-version-url] [![Build Status][travis-image]][travis-url] [![Test Coverage][coveralls-image]][coveralls-url]",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vishal Bajpai <vishal.dev1223@gmail.com> (vishal.dev1223@gmail.com)",
+  "license": "ISC"
+}
